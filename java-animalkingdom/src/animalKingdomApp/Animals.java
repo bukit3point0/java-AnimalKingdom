@@ -27,6 +27,10 @@ public abstract class Animals {
         this.reproduce = reproduce;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }

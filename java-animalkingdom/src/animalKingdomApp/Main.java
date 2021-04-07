@@ -62,17 +62,15 @@ public class Main {
         );
 
         // alphabetically discovered in 1758
-        printFilteredAnimals(animalList, (a) -> a.getYear() == 1758);
-        // .sort((a1,a2) -> {
-        //     return (a1.getName().compareTo(a2.getName()) > 0)
-        //         ? 1
-        //         : -1;
-        // });
-
+        animalList.sort((a1,a2) -> {
+            return (a1.getName().compareTo(a2.getName()) > 0)
+                ? 1
+                : -1;
+        });
+        printFilteredAnimals(animalList, (a) -> (a.getYear() == 1758));
         
-
         // mammals alphabetically
-        // System.out.println(animalList);
+        
     }
 
     public static void printFilteredAnimals(List<Animals> animalList, AnimalTester animalTester) {
